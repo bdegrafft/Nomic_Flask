@@ -49,7 +49,6 @@ def register():
         db.session.commit()
         flash('Thanks for registering, Please Log In')
         return redirect(url_for('login'))
-    flash(form.errors)
     return render_template('register.html', form=form)
 
 
